@@ -18,6 +18,7 @@ URL:		http://www.bareftp.org/
 %{?with_gnome_keyring:BuildRequires:	dotnet-gnome-keyring-sharp-devel}
 BuildRequires:	dotnet-gnome-sharp-devel
 BuildRequires:	dotnet-gtk-sharp2-devel
+BuildRequires:	rpmbuild(macros) >= 1.32
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
