@@ -1,23 +1,23 @@
 #
-# TODO: - fix build without gnome-keyring
-#	- errors when running with gnome-keyring 
-#
 # Conditional build
 %bcond_without	gnome_keyring	# without gnome-keyring
 #
 Summary:	-
 Summary(pl.UTF-8):	-
 Name:		bareftp
-Version:	0.3.3
+Version:	0.3.4
 Release:	0.1
 License:	GPL v2+
 Group:		Applications/Networking
 Source0:	http://www.bareftp.org/release/%{name}-%{version}.tar.gz
-# Source0-md5:	3ef22582b0167c7ef8150d31822d406e
+# Source0-md5:	2dd18be2eacd37e6ca7dd12b07ff086d
 URL:		http://www.bareftp.org/
 %{?with_gnome_keyring:BuildRequires:	dotnet-gnome-keyring-sharp-devel}
 BuildRequires:	dotnet-gnome-sharp-devel
 BuildRequires:	dotnet-gtk-sharp2-devel
+BuildRequires:	gettext-devel
+BuildRequires:	intltool >= 0.35
+BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.32
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
