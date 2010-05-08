@@ -2,8 +2,8 @@
 # Conditional build
 %bcond_without	gnome_keyring	# without gnome-keyring
 #
-Summary:	-
-Summary(pl.UTF-8):	-
+Summary:	File transfer client supporting the FTP, FTP (FTPS) and SSH (SFTP)
+Summary(pl.UTF-8):	Program do transferu plkików po FTP, FTP (FTPS) oraz SSH (SFTP)
 Name:		bareftp
 Version:	0.3.4
 Release:	0.1
@@ -22,8 +22,12 @@ BuildRequires:	rpmbuild(macros) >= 1.32
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
+bareFTP is a file transfer client writen in C# supporting the FTP, FTP
+over SSL/TLS (FTPS) and SSH File Transfer Protocol (SFTP).
 
 %description -l pl.UTF-8
+bareFTP jest programem do transferu plików napisanym w C# wspierającym
+protokoły FTP, FTP z obsługą SSL/TLS (FTPS) oraz SSH (SFTP).
 
 %prep
 %setup -q
