@@ -5,12 +5,12 @@
 Summary:	File transfer client supporting the FTP, FTP (FTPS) and SSH (SFTP)
 Summary(pl.UTF-8):	Program do transferu plkików używający FTP, FTP (FTPS) oraz SSH (SFTP)
 Name:		bareftp
-Version:	0.3.5
+Version:	0.3.6
 Release:	1
 License:	GPL v2+
 Group:		Applications/Networking
 Source0:	http://www.bareftp.org/release/%{name}-%{version}.tar.gz
-# Source0-md5:	a6e123e27c668f51d22fbc525856a89b
+# Source0-md5:	cdfb1275d06642fd82f9ff49ecf0b48f
 URL:		http://www.bareftp.org/
 %{?with_gnome_keyring:BuildRequires:	dotnet-gnome-keyring-sharp-devel}
 BuildRequires:	dotnet-gnome-sharp-devel
