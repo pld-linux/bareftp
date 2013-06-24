@@ -2,8 +2,8 @@
 # Conditional build
 %bcond_without	gnome_keyring	# without gnome-keyring
 #
-Summary:	File transfer client supporting the FTP, FTP (FTPS) and SSH (SFTP)
-Summary(pl.UTF-8):	Program do transferu plkików używający FTP, FTP (FTPS) oraz SSH (SFTP)
+Summary:	File transfer client supporting the FTP, FTPS and SFTP
+Summary(pl.UTF-8):	Program do transferu plików z użyciem FTP, FTPS oraz SFTP
 Name:		bareftp
 Version:	0.3.9
 Release:	1
