@@ -6,7 +6,7 @@ Summary:	File transfer client supporting the FTP, FTPS and SFTP
 Summary(pl.UTF-8):	Program do transferu plików z użyciem FTP, FTPS oraz SFTP
 Name:		bareftp
 Version:	0.3.9
-Release:	1
+Release:	2
 License:	GPL v2+
 Group:		Applications/Networking
 Source0:	http://www.bareftp.org/release/%{name}-%{version}.tar.gz
