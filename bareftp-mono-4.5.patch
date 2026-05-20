@@ -1,0 +1,55 @@
+--- bareftp-0.3.9/m4/shamrock/mono.m4	2026-05-20 11:06:16.587293541 +0200
++++ bareftp-0.3.9.new/m4/shamrock/mono.m4	2026-05-20 11:06:37.969561991 +0200
+@@ -5,7 +5,7 @@
+ 
+ AC_DEFUN([SHAMROCK_FIND_MONO_2_0_COMPILER],
+ [
+-	SHAMROCK_FIND_PROGRAM_OR_BAIL(MCS, gmcs)
++	SHAMROCK_FIND_PROGRAM_OR_BAIL(MCS, mcs)
+ ])
+ 
+ AC_DEFUN([SHAMROCK_FIND_MONO_RUNTIME],
+@@ -25,7 +25,9 @@
+ 		AC_MSG_CHECKING([for Mono $1 GAC for $asm.dll])
+ 		if test \
+ 			-e "$($PKG_CONFIG --variable=libdir mono)/mono/$1/$asm.dll" -o \
+-			-e "$($PKG_CONFIG --variable=prefix mono)/lib/mono/$1/$asm.dll"; \
++			-e "$($PKG_CONFIG --variable=prefix mono)/lib/mono/$1/$asm.dll" -o \
++			-e "$($PKG_CONFIG --variable=libdir mono)/mono/4.5/$asm.dll" -o \
++			-e "$($PKG_CONFIG --variable=prefix mono)/lib/mono/4.5/$asm.dll"; \
+ 			then \
+ 			AC_MSG_RESULT([found])
+ 		else
+--- bareftp-0.3.9/configure	2026-05-20 11:06:16.593555624 +0200
++++ bareftp-0.3.9.new/configure	2026-05-20 11:07:38.339561979 +0200
+@@ -14605,8 +14605,8 @@
+ 
+ 
+ 
+-	# Extract the first word of "gmcs", so it can be a program name with args.
+-set dummy gmcs; ac_word=$2
++	# Extract the first word of "mcs", so it can be a program name with args.
++set dummy mcs; ac_word=$2
+ { $as_echo "$as_me:${as_lineno-$LINENO}: checking for $ac_word" >&5
+ $as_echo_n "checking for $ac_word... " >&6; }
+ if ${ac_cv_path_MCS+:} false; then :
+@@ -14649,7 +14649,7 @@
+ 
+ 
+ 	if test "xMCS" = "xno"; then
+-		as_fn_error $? "You need to install 'gmcs'" "$LINENO" 5
++		as_fn_error $? "You need to install 'mcs'" "$LINENO" 5
+ 	fi
+ 
+ 
+@@ -14715,7 +14715,9 @@
+ $as_echo_n "checking for Mono 2.0 GAC for $asm.dll... " >&6; }
+ 		if test \
+ 			-e "$($PKG_CONFIG --variable=libdir mono)/mono/2.0/$asm.dll" -o \
+-			-e "$($PKG_CONFIG --variable=prefix mono)/lib/mono/2.0/$asm.dll"; \
++			-e "$($PKG_CONFIG --variable=prefix mono)/lib/mono/2.0/$asm.dll" -o \
++			-e "$($PKG_CONFIG --variable=libdir mono)/mono/4.5/$asm.dll" -o \
++			-e "$($PKG_CONFIG --variable=prefix mono)/lib/mono/4.5/$asm.dll"; \
+ 			then \
+ 			{ $as_echo "$as_me:${as_lineno-$LINENO}: result: found" >&5
+ $as_echo "found" >&6; }
